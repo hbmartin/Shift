@@ -8,14 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Shift'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'Gradient Animation based on time or motion'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
 Gradient Animation based on time or motion.
@@ -23,10 +17,10 @@ Ability fo mask gradient animations on text or images.
                        DESC
 
   s.homepage         = 'https://github.com/kgellci/Shift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://raw.githubusercontent.com/andre991/Shift/master/README/Shift_gif.gif', 'https://raw.githubusercontent.com/andre991/Shift/master/README/handle_logo_gradient.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kgellci' => 'kgellci@gmail.com' }
-  s.source           = { :git => 'https://github.com/kgellci/Shift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/andre991/Shift.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/kgellci'
 
   s.ios.deployment_target = '8.0'
@@ -39,5 +33,4 @@ Ability fo mask gradient animations on text or images.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'CoreMotion'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

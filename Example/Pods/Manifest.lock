@@ -1,27 +1,16 @@
 PODS:
-  - Nimble (7.3.4)
-  - Quick (1.3.4)
-  - Shift (0.2.2)
+  - Shift (0.2.3)
 
 DEPENDENCIES:
-  - Nimble (~> 7.3.2)
-  - Quick (~> 1.3.2)
   - Shift (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Nimble
-    - Quick
 
 EXTERNAL SOURCES:
   Shift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
-  Quick: f4f7f063c524394c73ed93ac70983c609805d481
-  Shift: 6aa4729ec2d7fbb0eaf016b2ee624fa5508892d8
+  Shift: 26d3b1c18f7b8b5efdfece1c89de7b00cfc691b2
 
-PODFILE CHECKSUM: 8457c7e1c6d690de52f6e063b1cc2245c4010fe4
+PODFILE CHECKSUM: 760b022807a6f86d38587bb1b97bb015b7309549
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.8.4

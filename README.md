@@ -1,9 +1,8 @@
 # Shift
 
-![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
-[![Platform](https://img.shields.io/cocoapods/p/Pastel.svg?style=flat)](http://cocoapods.org/pods/Pastel)
-[![CI Status](http://img.shields.io/travis/kgellci/Shift.svg?style=flat)](https://travis-ci.org/kgellci/Shift)
-[![Version](https://img.shields.io/cocoapods/v/Shift.svg?style=flat)](http://cocoapods.org/pods/Shift)
+![Swift](https://img.shields.io/badge/Swift-5-orange.svg)
+[![GitHub issues](https://img.shields.io/github/issues-raw/andre991/Shift.svg)](https://github.com/hbmartin/Directory-SwiftUI/issues)
+[![CI Status](http://img.shields.io/travis/andre991/Shift.svg?style=flat)](https://travis-ci.org/kgellci/Shift)
 [![License](https://img.shields.io/cocoapods/l/Shift.svg?style=flat)](http://cocoapods.org/pods/Shift)
 [![Platform](https://img.shields.io/cocoapods/p/Shift.svg?style=flat)](http://cocoapods.org/pods/Shift)
 
@@ -96,12 +95,13 @@ Shift is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Shift"
+pod 'Shift', :git => 'https://github.com/andre991/Shift.git'
 ```
 
-## Author
+## Authors
 
-kgellci, kgellci@gmail.com, @kgellci
+* kgellci, kgellci@gmail.com, @kgellci
+* andre991
 
 ## License
 

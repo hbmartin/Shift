@@ -1,9 +1,13 @@
 {
   "name": "Shift",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "summary": "Gradient Animation based on time or motion",
   "description": "Gradient Animation based on time or motion.\nAbility fo mask gradient animations on text or images.",
   "homepage": "https://github.com/kgellci/Shift",
+  "screenshots": [
+    "https://raw.githubusercontent.com/andre991/Shift/master/README/Shift_gif.gif",
+    "https://raw.githubusercontent.com/andre991/Shift/master/README/handle_logo_gradient.gif"
+  ],
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +16,8 @@
     "kgellci": "kgellci@gmail.com"
   },
   "source": {
-    "git": "https://github.com/kgellci/Shift.git",
-    "tag": "0.2.2"
+    "git": "https://github.com/andre991/Shift.git",
+    "tag": "0.2.3"
   },
   "social_media_url": "https://twitter.com/kgellci",
   "platforms": {
