@@ -12,17 +12,17 @@ import UIKit
 
 open class ShiftView: UIView, Shiftable {
     public var shiftLayer = ShiftLayer()
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupShift()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupShift()
     }
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         shiftLayer.frame = bounds
@@ -53,17 +53,17 @@ open class ShiftButton: UIButton, Shiftable {
             }
         }
     }
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupShift()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupShift()
     }
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         shiftLayer.frame = bounds
@@ -74,17 +74,17 @@ open class ShiftButton: UIButton, Shiftable {
 
 open class ShiftLabel: UILabel, Shiftable {
     public var shiftLayer = ShiftLayer()
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupShift()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupShift()
     }
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         shiftLayer.frame = bounds
@@ -104,49 +104,48 @@ open class ShiftMaskableLabel: ShiftView {
             }
         }
     }
-    
+
     open override var intrinsicContentSize: CGSize {
-        return textLabel.intrinsicContentSize
+        textLabel.intrinsicContentSize
     }
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupLabel()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupLabel()
     }
-    
+
     private func setupLabel() {
         addSubview(textLabel)
         textLabel.shifFillParent()
     }
-    
+
     public func setText(_ text: String) {
         textLabel.text = text
         textLabel.sizeToFit()
         invalidateIntrinsicContentSize()
     }
-    
 }
 
 // TextField
 
 open class ShiftTextfield: UITextField, Shiftable {
     public var shiftLayer = ShiftLayer()
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupShift()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupShift()
     }
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         shiftLayer.frame = bounds
@@ -157,17 +156,17 @@ open class ShiftTextfield: UITextField, Shiftable {
 
 open class ShiftTextView: UITextView, Shiftable {
     public var shiftLayer = ShiftLayer()
-    
+
     public override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         setupShift()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupShift()
     }
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         shiftLayer.frame = bounds
@@ -190,29 +189,29 @@ open class ShiftImageView: UIImageView, Shiftable {
             }
         }
     }
-    
+
     private var maskLayer: CALayer?
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupShift()
     }
-    
+
     public override init(image: UIImage?) {
         super.init(image: image)
         setupShift()
     }
-    
+
     public override init(image: UIImage?, highlightedImage: UIImage?) {
         super.init(image: image, highlightedImage: highlightedImage)
         setupShift()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupShift()
     }
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         shiftLayer.frame = bounds
@@ -229,10 +228,17 @@ extension UIView {
         shiftPinToSuperview(.left)
         shiftPinToSuperview(.right)
     }
-    
+
     func shiftPinToSuperview(_ attribute: NSLayoutConstraint.Attribute) {
-        let constraint = NSLayoutConstraint(item: self, attribute: attribute, relatedBy: .equal, toItem: self.superview, attribute: attribute, multiplier: 1.0, constant: 0)
+        let constraint = NSLayoutConstraint(
+            item: self,
+            attribute: attribute,
+            relatedBy: .equal,
+            toItem: self.superview,
+            attribute: attribute,
+            multiplier: 1.0,
+            constant: 0
+        )
         self.superview?.addConstraint(constraint)
     }
 }
-
