@@ -9,6 +9,9 @@ language: swift
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
+install:
+- ./install_swiftlint.sh
 script:
-- set -o pipefail && xcodebuild test -workspace Example/Shift.xcworkspace -scheme Shift-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/Shift.xcworkspace -scheme Shift-Example -sdk iphonesimulator13.2 ONLY_ACTIVE_ARCH=NO | xcpretty -c
 - pod lib lint
+- swiftlint lint Shift/Classes/
